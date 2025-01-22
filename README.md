@@ -19,11 +19,18 @@ cd predictive_analysis_api
 ```
 
 The repository contains the following files:
-- `setup.py`: For installing the application as a package.
-- `app.py`: The main FastAPI application file.
-- 
+- `setup.py`: Script to install the application as a Python package.
+- `app.py`: Main FastAPI application file to start the API server.
+- `requirements.txt`: Lists the required Python modules for the project.
+- `src/`: Directory containing core modules and logic.
+  - `__init__.py`: Marks the folder as a Python package.
+  - `data_ingestion.py`: Handles data ingestion processes.
+  - `model_trainer.py`: Contains logic for model training.
+- `notebook/`: Directory for data exploration and analysis.
+  - `notebook.ipynb` Jupyter Notebook used for exploring the dataset.
+  - `dataset/`: Folder containing the dataset required for analysis.
+    - `data.csv` the dataset used in the application.
 
----
 
 ## Step 2: Install Dependencies
 
@@ -73,6 +80,9 @@ uvicorn app:app --reload
 }
 ```
 
+![Screenshot 2025-01-22 214942](https://github.com/user-attachments/assets/21f4f6b7-e6c9-4afc-b39e-32cc53a77f9f)
+
+
 ---
 
 ### 2. Test `POST /upload` (File Upload Endpoint)
@@ -88,6 +98,7 @@ uvicorn app:app --reload
 4. Add a key-value pair:
    - **Key**: `file`
    - **Value**: Upload a `.csv` file from your system.
+       - Get the csv file from notebook->datset->predictive_maintenance.csv
 5. Click the **Send** button.
 
 #### Expected Response:
@@ -96,6 +107,8 @@ uvicorn app:app --reload
   "message": "File uploaded and train-test split completed successfully."
 }
 ```
+![Screenshot 2025-01-22 215036](https://github.com/user-attachments/assets/4215fe3a-725e-4ac6-9961-116dc14e13bc)
+
 
 ---
 
@@ -117,6 +130,8 @@ uvicorn app:app --reload
   "f1_score": 0.80
 }
 ```
+![Screenshot 2025-01-22 215058](https://github.com/user-attachments/assets/8fb4b918-1a25-43a7-9490-679f332573fe)
+
 
 ---
 
@@ -133,11 +148,11 @@ uvicorn app:app --reload
 4. Enter the following sample payload:
    ```json
    {
-     "air_temperature": 30.5,
-     "process_temperature": 75.2,
-     "rotational_speed": 1500,
-     "torque": 2.3,
-     "tool_wear": 12
+     "air_temperature": 300.3,
+     "process_temperature": 321.5,
+     "rotational_speed": 245,
+     "torque": 45.6,
+     "tool_wear": 3
    }
    ```
 5. Click the **Send** button.
@@ -148,6 +163,8 @@ uvicorn app:app --reload
   "prediction": "Failure"
 }
 ```
+
+![Screenshot 2025-01-22 215449](https://github.com/user-attachments/assets/3ef9b93d-c93a-4058-95ff-8b1e10a17406)
 
 ---
 
