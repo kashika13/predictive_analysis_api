@@ -98,7 +98,8 @@ uvicorn app:app --reload
 4. Add a key-value pair:
    - **Key**: `file`
    - **Value**: Upload a `.csv` file from your system.
-       - Get the csv file from notebook->datset->predictive_maintenance.csv
+       - Get the csv file from notebook->dataset->predictive_maintenance.csv
+       - You can upload your own csv file but make sure that column names and their types remains same as of above dataset.
 5. Click the **Send** button.
 
 #### Expected Response:
