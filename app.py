@@ -20,10 +20,6 @@ class InputData(BaseModel):
 # Create the app object
 app = FastAPI()
 
-# Load the model
-with open("artifacts/model.pkl", "rb") as model_file:
-    model = pickle.load(model_file)
-
 
 @app.get("/")
 def index():
@@ -81,7 +77,7 @@ def train_model():
         with open(model_path, "rb") as f:
             model = pickle.load(f)
 
-        logging.info("Prediction has been done.")
+        logging.info("Model has been trained.")
         return {"message": "Model trained successfully.", "accuracy": accuracy, "f1_score": f1_score}
 
     except Exception as e:
@@ -105,6 +101,7 @@ def predict(data: InputData):
         input_data = [[air_temperature, process_temperature, rotational_speed, torque, tool_wear]]
         
         prediction_probs = model.predict_proba(input_data) 
+        logging.info("Prediction has been done.")
         
         # Get the predicted class (0: No Failure, 1: Failure)
         predicted_class = model.predict(input_data)[0]
