@@ -51,6 +51,10 @@ Run your FastAPI application using the following command:
 ```bash
 uvicorn app:app --reload
 ```
+or
+```bash
+python -m uvicorn app:app --reload
+```
 
 ---
 
