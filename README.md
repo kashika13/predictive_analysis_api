@@ -1,12 +1,11 @@
-# FastAPI API Testing with Postman
+# Predictive Analysis API Testing with Postman
 
-This guide provides instructions to test your FastAPI endpoints locally using Postman.
+This guide provides instructions to test API endpoints locally using Postman.
 
 ## Prerequisites
 
 1. **FastAPI Application**: Ensure you have a FastAPI app ready for testing.
 2. **Postman**: Download and install Postman from [Postman’s website](https://www.postman.com/).
-3. **Environment**: Python installed with required dependencies for your FastAPI application.
 
 ---
 
@@ -15,8 +14,8 @@ This guide provides instructions to test your FastAPI endpoints locally using Po
 Download the FastAPI application from the GitHub repository:
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/kashika13/predictive_analysis_api.git
+cd predictive_analysis_api
 ```
 
 The repository contains the following files:
@@ -27,10 +26,10 @@ The repository contains the following files:
 
 ## Step 2: Install Dependencies
 
-Install the required dependencies using `setup.py`:
+Install the required dependencies using `requirements.txt`:
 
 ```bash
-pip install -e .
+pip install -r requirements.txt .
 ```
 
 Ensure all dependencies are successfully installed.
@@ -44,8 +43,6 @@ Run your FastAPI application using the following command:
 ```bash
 uvicorn app:app --reload
 ```
-
-Replace `app:app` with the appropriate module and FastAPI instance name. This will start the app locally at `http://127.0.0.1:8000/` by default.
 
 ---
 
@@ -153,11 +150,5 @@ Replace `app:app` with the appropriate module and FastAPI instance name. This wi
 
 ---
 
-## Notes
 
-- Ensure your FastAPI app is running before testing any endpoint.
-- Verify that the required dependencies for FastAPI are installed.
-- Replace the sample payloads and file paths as per your application’s requirements.
-
-For further assistance, refer to [FastAPI documentation](https://fastapi.tiangolo.com/).
 
