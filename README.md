@@ -21,15 +21,16 @@ cd predictive_analysis_api
 The repository contains the following files:
 - `setup.py`: For installing the application as a package.
 - `app.py`: The main FastAPI application file.
+- 
 
 ---
 
 ## Step 2: Install Dependencies
 
-Install the required dependencies using `requirements.txt`:
+Install the required dependencies using `setup.py`:
 
 ```bash
-pip install -r requirements.txt .
+pip install -e .
 ```
 
 Ensure all dependencies are successfully installed.
