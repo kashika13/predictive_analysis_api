@@ -1,0 +1,27 @@
+# Exclude artifacts folder
+artifacts/
+
+# Exclude logs folder
+logs/
+
+# Exclude virtual environment folder
+newenv/
+
+# Exclude egg-info folder
+machineDowntime.egg-info/
+
+# Common Python exclusions
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments (general)
+env/
+venv/
+ENV/
+.venv/
+
+# Other common patterns
+*.log
+*.sqlite3
+*.db
