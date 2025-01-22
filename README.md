@@ -161,7 +161,8 @@ uvicorn app:app --reload
 #### Expected Response:
 ```json
 {
-  "prediction": "Failure"
+  "prediction": "No Failure",
+  "confidence": 0.8967
 }
 ```
 
