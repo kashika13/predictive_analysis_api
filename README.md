@@ -23,9 +23,13 @@ The repository contains the following files:
 - `app.py`: Main FastAPI application file to start the API server.
 - `requirements.txt`: Lists the required Python modules for the project.
 - `src/`: Directory containing core modules and logic.
-  - `__init__.py`: Marks the folder as a Python package.
-  - `data_ingestion.py`: Handles data ingestion processes.
-  - `model_trainer.py`: Contains logic for model training.
+  -  `__init__.py`: Marks the folder as a Python package.
+  -  `logger.py` : Handles application logging for debugging and monitoring.
+  -  `exception.py`: Defines custom exceptions for better error handling.
+  - `components/`: Contains modules for data ingestion and model training.
+    - `__init__.py`: Marks the folder as a Python package.
+    - `data_ingestion.py`: Handles data ingestion processes.
+    - `model_trainer.py`: Contains logic for model training.
 - `notebook/`: Directory for data exploration and analysis.
   - `notebook.ipynb` Jupyter Notebook used for exploring the dataset.
   - `dataset/`: Folder containing the dataset required for analysis.
